@@ -3,24 +3,24 @@
     <h1>cadastre seu cartão</h1>
   </div>
 
-  
+
   <div class="card">
-    <img class="chip" src="./assets/chip.png">  
-    <span class="name">{{ cardNumber ? cardNumber : "#### #### #### ####" }}</span>
-    <span class="number">{{ cardName ? cardName : "name" }}</span>
-    <span class="date">{{ cardDueDate ? cardDueDate : "date"}}</span>
-    <span class="cvv">{{ cardCVV ? cardCVV : "cvv" }}</span>
+    <img class="chip" src="./assets/chip.png">
+    <span class="name">{{ cardNumber? cardNumber: "#### #### #### ####" }}</span>
+    <span class="number">{{ cardName? cardName: "name" }}</span>
+    <span class="date">{{ cardDueDate? cardDueDate: "date" }}</span>
+    <span class="cvv">{{ cardCVV? cardCVV: "cvv" }}</span>
   </div>
 
   <div>
     <div class="inputs">
-      <input v-model="cardName" class="form-control form-control-lg" type="text" placeholder="Nome do cartão" >
+      <input v-model="cardName" class="form-control form-control-lg" type="text" placeholder="Nome do cartão">
 
-      <input v-model="cardNumber" class="form-control form-control-lg" type="number" placeholder="Número do cartão" >
+      <input v-model="cardNumber" class="form-control form-control-lg" type="number" placeholder="Número do cartão">
 
-      <input v-model="cardDueDate" class="form-control form-control-2lg" type="date" placeholder="Data de vencimento" >
+      <input v-model="cardDueDate" class="form-control form-control-2lg" type="date" placeholder="Data de vencimento">
 
-      <input v-model="cardCVV" class="form-control form-control-lg" type="number" placeholder="CVV" >
+      <input v-model="cardCVV" class="form-control form-control-lg" type="number" placeholder="CVV">
 
       <center> <button type="button" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
       </center>
@@ -34,11 +34,13 @@
 
 
 
-export default{
+export default {
+
+
 
   name: 'twoWay',
   data() {
-    return{
+    return {
       cardCVV: null,
       cardDueDate: "",
       cardNumber: null,
@@ -68,8 +70,6 @@ axios
 
 
 <style>
-
-
 * {
   padding: 0;
   margin: 0;
@@ -86,18 +86,18 @@ axios
   src: url(fonts/LeoSemiRounded-Bold.ttf);
 }
 
-.chip{
+.chip {
   height: 40px;
   width: 50px;
   margin: 30px;
- 
+
 }
 
-.card{ 
+.card {
   border-style: none;
   margin: 20px;
   height: 12em;
-  background-image: linear-gradient(to right, rgb(165, 5, 214), rgb(255, 0, 242), rgb(212, 181, 3)) ;
+  background-image: linear-gradient(to right, rgb(165, 5, 214), rgb(255, 0, 242), rgb(212, 181, 3));
 }
 
 h1 {
@@ -112,7 +112,7 @@ h1 {
 
 }
 
-.name{
+.name {
   font-family: 'Cardium';
   color: white;
   font-size: 23px;
@@ -121,7 +121,7 @@ h1 {
   bottom: 1em;
 }
 
-.date{
+.date {
   font-family: 'Cardium';
   color: white;
   font-size: 20px;
@@ -131,7 +131,7 @@ h1 {
   bottom: 2.4em;
 }
 
-.number{
+.number {
   font-family: 'Cardium';
   color: white;
   font-size: 20px;
@@ -140,7 +140,8 @@ h1 {
   padding-left: 1.4em;
 
 }
-.cvv{
+
+.cvv {
   font-family: 'Cardium';
   color: white;
   font-size: 20px;
